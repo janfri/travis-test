@@ -1,5 +1,4 @@
 before_install:
   - sudo apt update
-  - sudo apt upgrade
   - sudo apt install libimage-exiftool-perl
   - exiftool -ver
