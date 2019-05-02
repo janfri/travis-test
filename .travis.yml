@@ -1,3 +1,2 @@
 before_install:
-  - sudo apt update
-  - sudo apt install libimage-exiftool-perl
+  - curl -L http://cpanmin.us | perl - --sudo Image::ExifTool
