@@ -1,2 +1,7 @@
 before_install:
   - curl -L http://cpanmin.us | perl - --sudo Image::ExifTool
+  - uname -a
+rvm:
+  - ruby-head
+  - jruby-19mode
+  - jruby-head    
