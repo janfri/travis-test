@@ -17,4 +17,3 @@ jobs:
         run: |
           uname -a
           curl -L http://cpanmin.us | perl - --sudo Image::ExifTool
-          exiftool -ver
