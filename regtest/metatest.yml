@@ -1,0 +1,140 @@
+---
+sample: metatest
+result:
+  stdout: ''
+  stderr: |+
+    Warnung: Kein Git-Repository. Nutzen Sie --no-index, um zwei Pfade außerhalb des Arbeitsverzeichnisses zu vergleichen.
+    Verwendung: git diff --no-index [<Optionen>] <Pfad> <Pfad>
+
+    Diff-Optionen zu Ausgabeformaten
+        -p, --patch           Patch erzeugen
+        -s, --no-patch        Ausgabe der Unterschiede unterdrücken
+        -u                    Patch erzeugen
+        -U, --unified[=<n>]   Unterschiede mit <n> Zeilen des Kontextes erstellen
+        -W, --function-context
+                              Unterschiede mit <n> Zeilen des Kontextes erstellen
+        --raw                 Unterschiede im Rohformat erstellen
+        --patch-with-raw      Synonym für '-p --raw'
+        --patch-with-stat     Synonym für '-p --stat'
+        --numstat             maschinenlesbare Ausgabe von --stat
+        --shortstat           nur die letzte Zeile von --stat ausgeben
+        -X, --dirstat[=<Parameter1,Parameter2>...]
+                              die Verteilung des relativen Umfangs der Änderungen für jedes Unterverzeichnis ausgeben
+        --cumulative          Synonym für --dirstat=cumulative
+        --dirstat-by-file[=<Parameter1,Parameter2>...]
+                              Synonym für --dirstat=files,Parameter1,Parameter2...
+        --check               warnen, wenn Änderungen Konfliktmarker oder Whitespace-Fehler einbringen
+        --summary             gekürzte Zusammenfassung, wie z.B. Erstellungen, Umbenennungen und Änderungen der Datei-Rechte
+        --name-only           nur Dateinamen der geänderten Dateien anzeigen
+        --name-status         nur Dateinamen und Status der geänderten Dateien anzeigen
+        --stat[=<Breite>[,<Namens-Breite>[,<Anzahl>]]]
+                              Zusammenfassung der Unterschiede erzeugen
+        --stat-width <Breite>
+                              Zusammenfassung der Unterschiede mit gegebener Breite erzeugen
+        --stat-name-width <Breite>
+                              Zusammenfassung der Unterschiede mit gegebener Namens-Breite erzeugen
+        --stat-graph-width <Breite>
+                              Zusammenfassung der Unterschiede mit gegebener Graph-Breite erzeugen
+        --stat-count <Anzahl>
+                              Zusammenfassung der Unterschiede mit begrenzten Zeilen erzeugen
+        --compact-summary     kompakte Zusammenstellung in Zusammenfassung der Unterschiede erzeugen
+        --binary              eine binäre Differenz ausgeben, dass angewendet werden kann
+        --full-index          vollständige Objekt-Namen in den "index"-Zeilen anzeigen
+        --color[=<wann>]      farbige Unterschiede anzeigen
+        --ws-error-highlight <Art>
+                              Whitespace-Fehler in den Zeilen 'context', 'old' oder 'new' bei den Unterschieden hervorheben
+        -z                    die Pfadnamen nicht verschleiern und NUL-Zeichen als Schlusszeichen in Ausgabefeldern bei --raw oder --numstat nutzen
+        --abbrev[=<Anzahl>]   benutze <Anzahl> Ziffern zur Anzeige von Objektnamen
+        --src-prefix <Präfix>
+                              den gegebenen Quell-Präfix statt "a/" anzeigen
+        --dst-prefix <Präfix>
+                              den gegebenen Ziel-Präfix statt "b/" anzeigen
+        --line-prefix <Präfix>
+                              einen zusätzlichen Präfix bei jeder Ausgabezeile voranstellen
+        --no-prefix           keine Quell- oder Ziel-Präfixe anzeigen
+        --default-prefix      Standardpräfixe a/ und b/ verwenden
+        --inter-hunk-context <Anzahl>
+                              Kontext zwischen Unterschied-Blöcken bis zur angegebenen Anzahl von Zeilen anzeigen
+        --output-indicator-new <Zeichen>
+                              das Zeichen festlegen, das eine neue Zeile kennzeichnet (statt '+')
+        --output-indicator-old <Zeichen>
+                              das Zeichen festlegen, das eine alte Zeile kennzeichnet (statt '-')
+        --output-indicator-context <Zeichen>
+                              das Zeichen festlegen, das den Kontext kennzeichnet (statt ' ')
+
+    Diff-Optionen zur Umbenennung
+        -B, --break-rewrites[=<n>[/<m>]]
+                              teile komplette Rewrite-Änderungen in Änderungen mit "löschen" und "erstellen"
+        -M, --find-renames[=<n>]
+                              Umbenennungen erkennen
+        -D, --irreversible-delete
+                              Preimage für Löschungen weglassen
+        -C, --find-copies[=<n>]
+                              Kopien erkennen
+        --find-copies-harder  ungeänderte Dateien als Quelle zum Finden von Kopien nutzen
+        --no-renames          Erkennung von Umbenennungen deaktivieren
+        --rename-empty        leere Blobs als Quelle von Umbenennungen nutzen
+        --follow              Auflistung der Historie einer Datei nach Umbenennung fortführen
+        -l <Anzahl>           Erkennung von Umbenennungen und Kopien verhindern, wenn die Anzahl der Ziele für Umbenennungen und Kopien das gegebene Limit überschreitet
+
+    Diff Algorithmus-Optionen
+        --minimal             die kleinstmöglichen Änderungen erzeugen
+        -w, --ignore-all-space
+                              Whitespace-Änderungen beim Vergleich von Zeilen ignorieren
+        -b, --ignore-space-change
+                              Änderungen bei der Anzahl von Whitespace ignorieren
+        --ignore-space-at-eol
+                              Whitespace-Änderungen am Zeilenende ignorieren
+        --ignore-cr-at-eol    den Zeilenumbruch am Ende der Zeile ignorieren
+        --ignore-blank-lines  Änderungen in leeren Zeilen ignorieren
+        -I, --ignore-matching-lines <Regex>
+                              Änderungen ignorieren, bei denen alle Zeilen mit <Regex> übereinstimmen
+        --indent-heuristic    Heuristik, um Grenzen der Änderungsblöcke für bessere Lesbarkeit zu verschieben
+        --patience            Änderungen durch Nutzung des Algorithmus "Patience Diff" erzeugen
+        --histogram           Änderungen durch Nutzung des Algorithmus "Histogram Diff" erzeugen
+        --diff-algorithm <Algorithmus>
+                              einen Algorithmus für Änderungen wählen
+        --anchored <Text>     Änderungen durch Nutzung des Algorithmus "Anchored Diff" erzeugen
+        --word-diff[=<Modus>]
+                              Wort-Änderungen zeigen, nutze <Modus>, um Wörter abzugrenzen
+        --word-diff-regex <Regex>
+                              <Regex> nutzen, um zu entscheiden, was ein Wort ist
+        --color-words[=<Regex>]
+                              entsprechend wie --word-diff=color --word-diff-regex=<Regex>
+        --color-moved[=<Modus>]
+                              verschobene Codezeilen sind andersfarbig
+        --color-moved-ws <Modus>
+                              wie Whitespaces in --color-moved ignoriert werden
+
+    Andere Diff-Optionen
+        --relative[=<Präfix>]
+                              wenn vom Unterverzeichnis aufgerufen, schließe Änderungen außerhalb aus und zeige relative Pfade an
+        -a, --text            alle Dateien als Text behandeln
+        -R                    die beiden Eingaben vertauschen und die Änderungen umkehren
+        --exit-code           mit Exit-Status 1 beenden, wenn Änderungen vorhanden sind, andernfalls mit 0
+        --quiet               alle Ausgaben vom Programm deaktivieren
+        --ext-diff            erlaube die Ausführung eines externes Programms für Änderungen
+        --textconv            Führe externe Text-Konvertierungsfilter aus, wenn binäre Dateien vergleicht werden
+        --ignore-submodules[=<wann>]
+                              Änderungen in Submodulen während der Erstellung der Unterschiede ignorieren
+        --submodule[=<Format>]
+                              angeben, wie Unterschiede in Submodulen gezeigt werden
+        --ita-invisible-in-index
+                              'git add -N' Einträge vom Index verstecken
+        --ita-visible-in-index
+                              'git add -N' Einträge im Index als echt behandeln
+        -S <Zeichenkette>     nach Unterschieden suchen, welche die Anzahl des Vorkommens der angegebenen Zeichenkette verändern
+        -G <Regex>            nach Unterschieden suchen, welche die Anzahl des Vorkommens des angegebenen regulären Ausdrucks verändern
+        --pickaxe-all         alle Änderungen im Changeset mit -S oder -G anzeigen
+        --pickaxe-regex       <Zeichenkette> bei -S als erweiterten POSIX regulären Ausdruck behandeln
+        -O <Datei>            die Reihenfolge kontrollieren, in der die Dateien in der Ausgabe erscheinen
+        --rotate-to <Pfad>    die Änderung des angegebenen Pfades zuerst anzeigen
+        --skip-to <Pfad>      überspringe die Ausgabe bis zum angegebenen Pfad
+        --find-object <Objekt-ID>
+                              nach Unterschieden suchen, welche die Anzahl des Vorkommens des angegebenen Objektes verändern
+        --diff-filter [(A|C|D|M|R|T|U|X|B)...[*]]
+                              Dateien anhand der Art der Änderung wählen
+        --output <Datei>      Ausgabe zu einer bestimmten Datei
+
+  exitstatus: 1
+...

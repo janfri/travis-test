@@ -1,0 +1,89 @@
+2.2.1
+Adapt git output to work with different git versions.
+Simplify determination of filenames for outputs.
+Add a test and Fix documentation.
+
+2.2.0
+Add a new method Regtest.log to allow the logging of temporary values which
+could be of interest for different reasons (i. e. debugging).
+With this version you can use `extend Regtest` to have the methods sample, log
+and combinations as top level methods. This is experimental and therefore not
+yet mentioned at README.
+
+2.1.1
+Adapt remaining examples of regtest/colorize to regtest/colors.
+
+2.1.0
+Use Process.clock_gettime for time measurements.
+Eliminate dependency to colorize gem. So Regtest has no longer any
+dependency.
+
+2.0.0 Major Release
+
+Incompatibilities to regtest 1.x
+1. The methods sample and combinations are not longer defined as instance
+methods but as as module methods only. Therefore you can't use it as mixed in
+methods via include.
+2. The exit code of regtest is now by default 1 if there are no plugins used which
+check the results like regtest/git.
+3. Regtest needs Ruby version 2.1 or higher.
+
+New Features
+Regtest can now be customized with a .regtestrc file in the home directory
+and/or actual directory. If ENV['NOREGTESTRC'] is set then .regtestrc files
+will not be loaded.
+A simple plugin mechanism is implemented and two plugins are part of regtest:
+regtest/colorize and regtest/git. Plugins are usual activated by require in
+one of the .regtestrc files.
+It is possible to change the exit codes for different return states of
+Regtest.check_results. This is done with changing Regtest.exit_codes see
+README.md for an example.
+
+Further Changes
+Reporting of statistics was reduced and the full filename for results files
+are now reported when running regtest.
+Some metatests are added.
+Version constant Regtest::VERSION is also added.
+Regtest.sample returns now the hash with result information. This could be
+useful for plugins which overload this method.
+A lot of internal refactoring and improving documentation was done.
+
+
+1.1.0
+Remove output of statistics for writing files: It's not useful.
+Report filename of generated results not only the basename of it.
+Add metatest. :)
+Some refactoring.
+
+1.0.0
+Some updates in documentation and project description.
+
+0.5.3
+Use rim/regtest to include regtest files in gem.
+Update homepage.
+
+0.5.2
+Bugfix REGTEST_FILES: Distinguish between rb and yml files.
+
+0.5.1 (yanked)
+Include yml files in REGTEST_FILES for rake task.
+
+0.5.0
+New method Regtest.combinations to build all combinations of a
+Hash-like object with arrays as values.
+
+0.4.0
+Improve rake task:
+- New constant REGTEST_FILES to define the Ruby files to work on.
+- Include the regtest dir in $LOAD_PATH.
+
+0.3.0
+Printing some statistics.
+Using regtest itself.
+Update documentation.
+
+0.2.0
+Update rake task (set lib directory to $LOAD_PATH).
+
+0.1.0
+First public release.

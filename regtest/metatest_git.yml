@@ -1,0 +1,69 @@
+---
+sample: all new
+result:
+  stdout: |
+    ?? combinations.yml
+    ?? examples.yml
+    ?? "filename with spaces.yml"
+    ?? log.yml
+    ?? log_append.yml
+    ?? log_rewrite.yml
+    ?? toplevel.yml
+  stderr: ''
+  exitstatus: 1
+---
+sample: only one new
+result:
+  stdout: |
+    A  combinations.yml
+    A  examples.yml
+    ?? "filename with spaces.yml"
+    ?? log.yml
+    ?? log_append.yml
+    ?? log_rewrite.yml
+    ?? toplevel.yml
+  stderr: ''
+  exitstatus: 1
+---
+sample: one new one modified to index
+result:
+  stdout: |
+    A  combinations.yml
+    AM examples.yml
+    ?? "filename with spaces.yml"
+    ?? log.yml
+    ?? log_append.yml
+    ?? log_rewrite.yml
+    ?? toplevel.yml
+  stderr: ''
+  exitstatus: 2
+---
+sample: one new one modified
+result:
+  stdout: |2
+     M examples.yml
+    ?? "filename with spaces.yml"
+    ?? log.yml
+    ?? log_append.yml
+    ?? log_rewrite.yml
+    ?? toplevel.yml
+  stderr: ''
+  exitstatus: 2
+---
+sample: all in index
+result:
+  stdout: |
+    M  examples.yml
+    A  "filename with spaces.yml"
+    A  log.yml
+    A  log_append.yml
+    A  log_rewrite.yml
+    A  toplevel.yml
+  stderr: ''
+  exitstatus: 0
+---
+sample: all commited
+result:
+  stdout: ''
+  stderr: ''
+  exitstatus: 0
